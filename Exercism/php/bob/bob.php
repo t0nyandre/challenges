@@ -19,7 +19,6 @@ class Bob {
     public function cleanString($string)
     {
         $this->string = iconv('utf-8', 'ascii//TRANSLIT', $string);
-        $output = preg_replace("/[^a-zA-Z]+/", "", $this->string);
-        return $output;
+        return preg_replace("/[^a-zA-Z]+/", "", $this->string);
     }
 }
